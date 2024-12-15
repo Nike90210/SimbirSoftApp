@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA6F9D282D0EF45700F3B4AD /* CreateDutyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6F9D272D0EF45700F3B4AD /* CreateDutyController.swift */; };
+		AA6F9D2A2D0EF49600F3B4AD /* CreateDutyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6F9D292D0EF49600F3B4AD /* CreateDutyView.swift */; };
 		AAA21B7C2D0DE2A9004BA8B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAA21B712D0DE2A9004BA8B0 /* Assets.xcassets */; };
-		AAA21B7F2D0DE2A9004BA8B0 /* MainDutyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA21B6C2D0DE2A9004BA8B0 /* MainDutyListViewController.swift */; };
+		AAA21B7F2D0DE2A9004BA8B0 /* DutyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA21B6C2D0DE2A9004BA8B0 /* DutyController.swift */; };
 		AAA21B802D0DE2A9004BA8B0 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA21B6E2D0DE2A9004BA8B0 /* Task.swift */; };
 		AAA21B812D0DE2A9004BA8B0 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA21B6F2D0DE2A9004BA8B0 /* TaskManager.swift */; };
 		AAA21B822D0DE2A9004BA8B0 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA21B742D0DE2A9004BA8B0 /* TaskCell.swift */; };
@@ -39,7 +41,9 @@
 		AA12FCCC2D0C5E8300DFE8EE /* SimbirSoftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimbirSoftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA12FCE22D0C5E8500DFE8EE /* SimbirSoftAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimbirSoftAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA12FCEC2D0C5E8500DFE8EE /* SimbirSoftAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimbirSoftAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAA21B6C2D0DE2A9004BA8B0 /* MainDutyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDutyListViewController.swift; sourceTree = "<group>"; };
+		AA6F9D272D0EF45700F3B4AD /* CreateDutyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDutyController.swift; sourceTree = "<group>"; };
+		AA6F9D292D0EF49600F3B4AD /* CreateDutyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDutyView.swift; sourceTree = "<group>"; };
+		AAA21B6C2D0DE2A9004BA8B0 /* DutyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DutyController.swift; sourceTree = "<group>"; };
 		AAA21B6E2D0DE2A9004BA8B0 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		AAA21B6F2D0DE2A9004BA8B0 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		AAA21B712D0DE2A9004BA8B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,7 +116,8 @@
 		AAA21B6D2D0DE2A9004BA8B0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				AAA21B6C2D0DE2A9004BA8B0 /* MainDutyListViewController.swift */,
+				AAA21B6C2D0DE2A9004BA8B0 /* DutyController.swift */,
+				AA6F9D272D0EF45700F3B4AD /* CreateDutyController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			children = (
 				AAA21B752D0DE2A9004BA8B0 /* Components */,
 				AAA21B762D0DE2A9004BA8B0 /* DutyView.swift */,
+				AA6F9D292D0EF49600F3B4AD /* CreateDutyView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -156,12 +162,12 @@
 			isa = PBXGroup;
 			children = (
 				AAA21B702D0DE2A9004BA8B0 /* Model */,
+				AAA21B772D0DE2A9004BA8B0 /* View */,
 				AAA21B6D2D0DE2A9004BA8B0 /* Controller */,
 				AAA21B732D0DE2A9004BA8B0 /* Resourses */,
-				AAA21B772D0DE2A9004BA8B0 /* View */,
 				AAA21B782D0DE2A9004BA8B0 /* AppDelegate.swift */,
-				AAA21B792D0DE2A9004BA8B0 /* Info.plist */,
 				AAA21B7A2D0DE2A9004BA8B0 /* SceneDelegate.swift */,
+				AAA21B792D0DE2A9004BA8B0 /* Info.plist */,
 			);
 			path = SimbirSoftApp;
 			sourceTree = "<group>";
@@ -309,10 +315,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAA21B862D0DE2A9004BA8B0 /* tasks.json in Sources */,
-				AAA21B7F2D0DE2A9004BA8B0 /* MainDutyListViewController.swift in Sources */,
+				AA6F9D282D0EF45700F3B4AD /* CreateDutyController.swift in Sources */,
+				AAA21B7F2D0DE2A9004BA8B0 /* DutyController.swift in Sources */,
 				AAA21B802D0DE2A9004BA8B0 /* Task.swift in Sources */,
 				AAA21B812D0DE2A9004BA8B0 /* TaskManager.swift in Sources */,
 				AAA21B822D0DE2A9004BA8B0 /* TaskCell.swift in Sources */,
+				AA6F9D2A2D0EF49600F3B4AD /* CreateDutyView.swift in Sources */,
 				AAA21B832D0DE2A9004BA8B0 /* DutyView.swift in Sources */,
 				AAA21B842D0DE2A9004BA8B0 /* AppDelegate.swift in Sources */,
 				AAA21B852D0DE2A9004BA8B0 /* SceneDelegate.swift in Sources */,

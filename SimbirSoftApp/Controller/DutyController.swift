@@ -16,10 +16,19 @@ class DutyController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = mainView
+        addAction()
         mainView.taskTable.dataSource = self
         mainView.taskTable.delegate = self
     }
 
+
+    func addAction() {
+        let pushAddAction = UIAction { [unowned self] _ in
+            let vc = CreateDutyController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        mainView.plusButton.addAction(pushAddAction, for: .touchUpInside)
+    }
 }
 
 extension DutyController: UITableViewDelegate, UITableViewDataSource {
