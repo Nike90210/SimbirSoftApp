@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class CreateDutyView: UIView {
 
     var addButton = UIButton(type: .system)
@@ -22,12 +23,12 @@ class CreateDutyView: UIView {
         setConstraints()
     }
 
-
-
     func setView() {
+
         addButton.setTitle("Добавить", for: .normal)
         addButton.setTitleColor(.systemRed, for: .normal)
         addButton.backgroundColor = .clear
+
 
         dutyNameTF.placeholder = "Название"
         dutyNameTF.textColor = .black
@@ -36,12 +37,19 @@ class CreateDutyView: UIView {
         dutyDescription.borderStyle = .roundedRect
         dutyDescription.textColor = .black
 
+
         dutyStartLbl.text = "Начало:"
         dutyStartLbl.font = UIFont(name: "Helvetica", size: 18)
         dutyStartLbl.textColor = .black
 
-        dataTaskPicker.preferredDatePickerStyle = .automatic
+
+        if #available(iOS 13.4, *) {
+            dataTaskPicker.preferredDatePickerStyle = .automatic
+        } else {
+            dataTaskPicker.datePickerMode = .dateAndTime
+        }
     }
+
 
     let stackView: UIStackView = {
         let stackView = UIStackView()
@@ -51,44 +59,44 @@ class CreateDutyView: UIView {
         return stackView
     }()
 
-    func setConstraints(){
+
+    func setConstraints() {
         addSubview(addButton)
         addSubview(dutyNameTF)
         addSubview(dutyDescription)
         addSubview(stackView)
+
         stackView.addArrangedSubview(dutyStartLbl)
         stackView.addArrangedSubview(dataTaskPicker)
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        addButton.translatesAutoresizingMaskIntoConstraints = false
-        dutyNameTF.translatesAutoresizingMaskIntoConstraints = false
-        dutyDescription.translatesAutoresizingMaskIntoConstraints = false
+
+
+        [stackView, addButton, dutyNameTF, dutyDescription].forEach {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+        }
 
         NSLayoutConstraint.activate([
+
             addButton.topAnchor.constraint(equalTo: topAnchor, constant: 60),
             addButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
+
 
             dutyNameTF.topAnchor.constraint(equalTo: topAnchor, constant: 300),
             dutyNameTF.centerXAnchor.constraint(equalTo: centerXAnchor),
 
+
             dutyDescription.topAnchor.constraint(equalTo: dutyNameTF.bottomAnchor, constant: 100),
-            dutyDescription.leadingAnchor.constraint(equalTo: leadingAnchor,  constant: 16),
-            dutyDescription.trailingAnchor.constraint(equalTo: trailingAnchor,  constant: -16),
+            dutyDescription.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            dutyDescription.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             dutyDescription.heightAnchor.constraint(equalToConstant: 100),
-            dutyDescription.centerXAnchor.constraint(equalTo: centerXAnchor),
+
 
             stackView.topAnchor.constraint(equalTo: dutyDescription.bottomAnchor, constant: 100),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
-
         ])
     }
 
-
-
-
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }

@@ -21,13 +21,21 @@ class DutyController: UIViewController {
         mainView.taskTable.delegate = self
     }
 
-
     func addAction() {
-        let pushAddAction = UIAction { [unowned self] _ in
-            let vc = CreateDutyController()
-            self.navigationController?.pushViewController(vc, animated: true)
+        if #available(iOS 14.0, *) {
+            let pushAddAction = UIAction { [unowned self] _ in
+                let vc = CreateDutyController()
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+            mainView.plusButton.addAction(pushAddAction, for: .touchUpInside)
+        } else {
+            mainView.plusButton.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
         }
-        mainView.plusButton.addAction(pushAddAction, for: .touchUpInside)
+    }
+
+    @objc func plusButtonTapped() {
+        let vc = CreateDutyController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -35,12 +43,11 @@ extension DutyController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         taskArray.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TaskCell.resuseID) as! TaskCell
         cell.titleLbl.text = taskArray[indexPath.row]
         cell.timeLbl.text = timeArray[indexPath.row]
         return cell
     }
-    
 }
