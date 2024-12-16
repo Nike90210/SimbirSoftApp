@@ -37,7 +37,18 @@ class DutyController: UIViewController {
         let vc = CreateDutyController()
         navigationController?.pushViewController(vc, animated: true)
     }
+
+    private func openDetailVC(for item: String) {
+        let detailVC = DetailController()
+        detailVC.detailView.titleLable.text = item
+        present(detailVC, animated: true)
+    }
+
 }
+
+
+
+
 
 extension DutyController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,5 +60,10 @@ extension DutyController: UITableViewDelegate, UITableViewDataSource {
         cell.titleLbl.text = taskArray[indexPath.row]
         cell.timeLbl.text = timeArray[indexPath.row]
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        openDetailVC(for: taskArray[indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA6797CB2D10385A00ADCA03 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6797CA2D10385A00ADCA03 /* DetailController.swift */; };
+		AA6797CD2D10388200ADCA03 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6797CC2D10388200ADCA03 /* DetailView.swift */; };
 		AA6F9D282D0EF45700F3B4AD /* CreateDutyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6F9D272D0EF45700F3B4AD /* CreateDutyController.swift */; };
 		AA6F9D2A2D0EF49600F3B4AD /* CreateDutyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6F9D292D0EF49600F3B4AD /* CreateDutyView.swift */; };
 		AAA21B7C2D0DE2A9004BA8B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAA21B712D0DE2A9004BA8B0 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 		AAA21B842D0DE2A9004BA8B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA21B782D0DE2A9004BA8B0 /* AppDelegate.swift */; };
 		AAA21B852D0DE2A9004BA8B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA21B7A2D0DE2A9004BA8B0 /* SceneDelegate.swift */; };
 		AAA21B862D0DE2A9004BA8B0 /* tasks.json in Sources */ = {isa = PBXBuildFile; fileRef = AAA21B722D0DE2A9004BA8B0 /* tasks.json */; };
+		CF1CED5FA54C0D78707E49C3 /* Pods_SimbirSoftApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97A1C8053D769CFAC9B0A50 /* Pods_SimbirSoftApp.framework */; };
+		E0C415CF00AA11647694F36F /* Pods_SimbirSoftAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C40C2A46E7FA84A8F8C7BA /* Pods_SimbirSoftAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,19 +32,17 @@
 			remoteGlobalIDString = AA12FCCB2D0C5E8300DFE8EE;
 			remoteInfo = SimbirSoftApp;
 		};
-		AA12FCED2D0C5E8500DFE8EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA12FCC42D0C5E8300DFE8EE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AA12FCCB2D0C5E8300DFE8EE;
-			remoteInfo = SimbirSoftApp;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1EBB9BDBBCD64F895AF1872F /* Pods-SimbirSoftApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimbirSoftApp.release.xcconfig"; path = "Target Support Files/Pods-SimbirSoftApp/Pods-SimbirSoftApp.release.xcconfig"; sourceTree = "<group>"; };
+		20DD871AC42DE74D337EEAD5 /* Pods-SimbirSoftAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimbirSoftAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SimbirSoftAppTests/Pods-SimbirSoftAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9F155B4C6C50207E142AC4EE /* Pods-SimbirSoftAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimbirSoftAppTests.release.xcconfig"; path = "Target Support Files/Pods-SimbirSoftAppTests/Pods-SimbirSoftAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		A9C40C2A46E7FA84A8F8C7BA /* Pods_SimbirSoftAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimbirSoftAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA12FCCC2D0C5E8300DFE8EE /* SimbirSoftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimbirSoftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA12FCE22D0C5E8500DFE8EE /* SimbirSoftAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimbirSoftAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA12FCEC2D0C5E8500DFE8EE /* SimbirSoftAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimbirSoftAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA6797CA2D10385A00ADCA03 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		AA6797CC2D10388200ADCA03 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		AA6F9D272D0EF45700F3B4AD /* CreateDutyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDutyController.swift; sourceTree = "<group>"; };
 		AA6F9D292D0EF49600F3B4AD /* CreateDutyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDutyView.swift; sourceTree = "<group>"; };
 		AAA21B6C2D0DE2A9004BA8B0 /* DutyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DutyController.swift; sourceTree = "<group>"; };
@@ -53,17 +55,14 @@
 		AAA21B782D0DE2A9004BA8B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAA21B792D0DE2A9004BA8B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAA21B7A2D0DE2A9004BA8B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D97A1C8053D769CFAC9B0A50 /* Pods_SimbirSoftApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimbirSoftApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E63570DAB4C35CDE0376C283 /* Pods-SimbirSoftApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimbirSoftApp.debug.xcconfig"; path = "Target Support Files/Pods-SimbirSoftApp/Pods-SimbirSoftApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		AA12FCE52D0C5E8500DFE8EE /* SimbirSoftAppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = SimbirSoftAppTests;
-			sourceTree = "<group>";
-		};
-		AA12FCEF2D0C5E8500DFE8EE /* SimbirSoftAppUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SimbirSoftAppUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -73,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF1CED5FA54C0D78707E49C3 /* Pods_SimbirSoftApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,26 +80,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AA12FCE92D0C5E8500DFE8EE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				E0C415CF00AA11647694F36F /* Pods_SimbirSoftAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D9E52F6A4CC1875B0DC7F57 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E63570DAB4C35CDE0376C283 /* Pods-SimbirSoftApp.debug.xcconfig */,
+				1EBB9BDBBCD64F895AF1872F /* Pods-SimbirSoftApp.release.xcconfig */,
+				20DD871AC42DE74D337EEAD5 /* Pods-SimbirSoftAppTests.debug.xcconfig */,
+				9F155B4C6C50207E142AC4EE /* Pods-SimbirSoftAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4AAD1CED8AE175F64A215F5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D97A1C8053D769CFAC9B0A50 /* Pods_SimbirSoftApp.framework */,
+				A9C40C2A46E7FA84A8F8C7BA /* Pods_SimbirSoftAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AA12FCC32D0C5E8300DFE8EE = {
 			isa = PBXGroup;
 			children = (
 				AA12FCCD2D0C5E8300DFE8EE /* Products */,
 				AAA21B7B2D0DE2A9004BA8B0 /* SimbirSoftApp */,
 				AA12FCE52D0C5E8500DFE8EE /* SimbirSoftAppTests */,
-				AA12FCEF2D0C5E8500DFE8EE /* SimbirSoftAppUITests */,
+				1D9E52F6A4CC1875B0DC7F57 /* Pods */,
+				4AAD1CED8AE175F64A215F5F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,7 +123,6 @@
 			children = (
 				AA12FCCC2D0C5E8300DFE8EE /* SimbirSoftApp.app */,
 				AA12FCE22D0C5E8500DFE8EE /* SimbirSoftAppTests.xctest */,
-				AA12FCEC2D0C5E8500DFE8EE /* SimbirSoftAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,6 +132,7 @@
 			children = (
 				AAA21B6C2D0DE2A9004BA8B0 /* DutyController.swift */,
 				AA6F9D272D0EF45700F3B4AD /* CreateDutyController.swift */,
+				AA6797CA2D10385A00ADCA03 /* DetailController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -154,6 +169,7 @@
 				AAA21B752D0DE2A9004BA8B0 /* Components */,
 				AAA21B762D0DE2A9004BA8B0 /* DutyView.swift */,
 				AA6F9D292D0EF49600F3B4AD /* CreateDutyView.swift */,
+				AA6797CC2D10388200ADCA03 /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,17 +195,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA12FCF52D0C5E8500DFE8EE /* Build configuration list for PBXNativeTarget "SimbirSoftApp" */;
 			buildPhases = (
+				2BE13B37B0B6E268F763ABC6 /* [CP] Check Pods Manifest.lock */,
 				AA12FCC82D0C5E8300DFE8EE /* Sources */,
 				AA12FCC92D0C5E8300DFE8EE /* Frameworks */,
 				AA12FCCA2D0C5E8300DFE8EE /* Resources */,
+				A4EB7D81B8A8E875EF278DD6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SimbirSoftApp;
-			packageProductDependencies = (
-			);
 			productName = SimbirSoftApp;
 			productReference = AA12FCCC2D0C5E8300DFE8EE /* SimbirSoftApp.app */;
 			productType = "com.apple.product-type.application";
@@ -198,6 +214,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA12FCFA2D0C5E8500DFE8EE /* Build configuration list for PBXNativeTarget "SimbirSoftAppTests" */;
 			buildPhases = (
+				E8D3D5ACE37F95B76471F424 /* [CP] Check Pods Manifest.lock */,
 				AA12FCDE2D0C5E8500DFE8EE /* Sources */,
 				AA12FCDF2D0C5E8500DFE8EE /* Frameworks */,
 				AA12FCE02D0C5E8500DFE8EE /* Resources */,
@@ -211,34 +228,9 @@
 				AA12FCE52D0C5E8500DFE8EE /* SimbirSoftAppTests */,
 			);
 			name = SimbirSoftAppTests;
-			packageProductDependencies = (
-			);
 			productName = SimbirSoftAppTests;
 			productReference = AA12FCE22D0C5E8500DFE8EE /* SimbirSoftAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		AA12FCEB2D0C5E8500DFE8EE /* SimbirSoftAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AA12FCFD2D0C5E8500DFE8EE /* Build configuration list for PBXNativeTarget "SimbirSoftAppUITests" */;
-			buildPhases = (
-				AA12FCE82D0C5E8500DFE8EE /* Sources */,
-				AA12FCE92D0C5E8500DFE8EE /* Frameworks */,
-				AA12FCEA2D0C5E8500DFE8EE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AA12FCEE2D0C5E8500DFE8EE /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				AA12FCEF2D0C5E8500DFE8EE /* SimbirSoftAppUITests */,
-			);
-			name = SimbirSoftAppUITests;
-			packageProductDependencies = (
-			);
-			productName = SimbirSoftAppUITests;
-			productReference = AA12FCEC2D0C5E8500DFE8EE /* SimbirSoftAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -254,10 +246,6 @@
 						CreatedOnToolsVersion = 16.1;
 					};
 					AA12FCE12D0C5E8500DFE8EE = {
-						CreatedOnToolsVersion = 16.1;
-						TestTargetID = AA12FCCB2D0C5E8300DFE8EE;
-					};
-					AA12FCEB2D0C5E8500DFE8EE = {
 						CreatedOnToolsVersion = 16.1;
 						TestTargetID = AA12FCCB2D0C5E8300DFE8EE;
 					};
@@ -279,7 +267,6 @@
 			targets = (
 				AA12FCCB2D0C5E8300DFE8EE /* SimbirSoftApp */,
 				AA12FCE12D0C5E8500DFE8EE /* SimbirSoftAppTests */,
-				AA12FCEB2D0C5E8500DFE8EE /* SimbirSoftAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -300,14 +287,71 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA12FCEA2D0C5E8500DFE8EE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BE13B37B0B6E268F763ABC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimbirSoftApp-checkManifestLockResult.txt",
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
-/* End PBXResourcesBuildPhase section */
+		A4EB7D81B8A8E875EF278DD6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimbirSoftApp/Pods-SimbirSoftApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimbirSoftApp/Pods-SimbirSoftApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimbirSoftApp/Pods-SimbirSoftApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8D3D5ACE37F95B76471F424 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimbirSoftAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AA12FCC82D0C5E8300DFE8EE /* Sources */ = {
@@ -315,7 +359,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAA21B862D0DE2A9004BA8B0 /* tasks.json in Sources */,
+				AA6797CD2D10388200ADCA03 /* DetailView.swift in Sources */,
 				AA6F9D282D0EF45700F3B4AD /* CreateDutyController.swift in Sources */,
+				AA6797CB2D10385A00ADCA03 /* DetailController.swift in Sources */,
 				AAA21B7F2D0DE2A9004BA8B0 /* DutyController.swift in Sources */,
 				AAA21B802D0DE2A9004BA8B0 /* Task.swift in Sources */,
 				AAA21B812D0DE2A9004BA8B0 /* TaskManager.swift in Sources */,
@@ -334,13 +380,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA12FCE82D0C5E8500DFE8EE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -349,27 +388,25 @@
 			target = AA12FCCB2D0C5E8300DFE8EE /* SimbirSoftApp */;
 			targetProxy = AA12FCE32D0C5E8500DFE8EE /* PBXContainerItemProxy */;
 		};
-		AA12FCEE2D0C5E8500DFE8EE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AA12FCCB2D0C5E8300DFE8EE /* SimbirSoftApp */;
-			targetProxy = AA12FCED2D0C5E8500DFE8EE /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AA12FCF62D0C5E8500DFE8EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E63570DAB4C35CDE0376C283 /* Pods-SimbirSoftApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C4MF94BMZN;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SimbirSoftApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -378,25 +415,32 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.medey90-mail.SimbirSoftApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		AA12FCF72D0C5E8500DFE8EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EBB9BDBBCD64F895AF1872F /* Pods-SimbirSoftApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C4MF94BMZN;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SimbirSoftApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -405,9 +449,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.medey90-mail.SimbirSoftApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -532,12 +580,14 @@
 		};
 		AA12FCFB2D0C5E8500DFE8EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20DD871AC42DE74D337EEAD5 /* Pods-SimbirSoftAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C4MF94BMZN;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.medey90-mail.SimbirSoftAppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -550,12 +600,14 @@
 		};
 		AA12FCFC2D0C5E8500DFE8EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F155B4C6C50207E142AC4EE /* Pods-SimbirSoftAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C4MF94BMZN;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.medey90-mail.SimbirSoftAppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -563,38 +615,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimbirSoftApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SimbirSoftApp";
-			};
-			name = Release;
-		};
-		AA12FCFE2D0C5E8500DFE8EE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ru.medey90-mail.SimbirSoftAppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SimbirSoftApp;
-			};
-			name = Debug;
-		};
-		AA12FCFF2D0C5E8500DFE8EE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ru.medey90-mail.SimbirSoftAppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SimbirSoftApp;
 			};
 			name = Release;
 		};
@@ -624,15 +644,6 @@
 			buildConfigurations = (
 				AA12FCFB2D0C5E8500DFE8EE /* Debug */,
 				AA12FCFC2D0C5E8500DFE8EE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AA12FCFD2D0C5E8500DFE8EE /* Build configuration list for PBXNativeTarget "SimbirSoftAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AA12FCFE2D0C5E8500DFE8EE /* Debug */,
-				AA12FCFF2D0C5E8500DFE8EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

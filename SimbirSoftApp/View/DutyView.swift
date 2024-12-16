@@ -41,7 +41,6 @@ class DutyView: UIView {
         if #available(iOS 14.0, *) {
             dateTaskPicker.preferredDatePickerStyle = .inline
         } else {
-
             dateTaskPicker.datePickerMode = .dateAndTime
         }
 
