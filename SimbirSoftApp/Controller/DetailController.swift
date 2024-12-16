@@ -10,14 +10,26 @@ import UIKit
 class DetailController: UIViewController {
 
     let detailView = DetailView()
+    var dutyDescriptionText: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view = detailView
         modalPresentationStyle = .fullScreen
-        title = detailView.titleLable.text ?? ""
+        title = "Детали собатия"
+        setupButton()
+
+        if let text = dutyDescriptionText {
+            detailView.dutyDescription.text = text
+        }
     }
 
-    
+    func setupButton() {
+        detailView.readyButton.addTarget(self, action: #selector(closeModalVC), for: .touchUpInside)
+    }
 
+    @objc func closeModalVC(){
+        dismiss(animated: true, completion: nil)
+    }
 }
+

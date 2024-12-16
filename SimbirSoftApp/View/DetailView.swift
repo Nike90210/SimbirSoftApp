@@ -59,8 +59,8 @@ class DetailView: UIView {
         }
 
         NSLayoutConstraint.activate([
-            readyButton.topAnchor.constraint(equalTo: topAnchor, constant: 40),
-            readyButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            readyButton.topAnchor.constraint(equalTo: topAnchor, constant: 75),
+            readyButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
             titleLable.centerXAnchor.constraint(equalTo: centerXAnchor),
             titleLable.topAnchor.constraint(equalTo: topAnchor, constant: 80),
 

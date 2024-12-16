@@ -29,14 +29,13 @@ class CreateDutyView: UIView {
         addButton.setTitleColor(.systemRed, for: .normal)
         addButton.backgroundColor = .clear
 
-
         dutyNameTF.placeholder = "Название"
         dutyNameTF.textColor = .black
+        dutyNameTF.borderStyle = .roundedRect
 
         dutyDescription.placeholder = "Введите описание текста"
         dutyDescription.borderStyle = .roundedRect
         dutyDescription.textColor = .black
-
 
         dutyStartLbl.text = "Начало:"
         dutyStartLbl.font = UIFont(name: "Helvetica", size: 18)
@@ -76,13 +75,14 @@ class CreateDutyView: UIView {
 
         NSLayoutConstraint.activate([
 
-            addButton.topAnchor.constraint(equalTo: topAnchor, constant: 60),
-            addButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
-
-
             dutyNameTF.topAnchor.constraint(equalTo: topAnchor, constant: 300),
-            dutyNameTF.centerXAnchor.constraint(equalTo: centerXAnchor),
+            dutyNameTF.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            dutyNameTF.widthAnchor.constraint(equalToConstant: 250),
 
+            addButton.topAnchor.constraint(equalTo: topAnchor, constant: 300),
+            addButton.leadingAnchor.constraint(equalTo: dutyNameTF.trailingAnchor, constant: 40),
+            addButton.heightAnchor.constraint(equalToConstant: 40),
+            addButton.widthAnchor.constraint(equalToConstant: 70),
 
             dutyDescription.topAnchor.constraint(equalTo: dutyNameTF.bottomAnchor, constant: 100),
             dutyDescription.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),

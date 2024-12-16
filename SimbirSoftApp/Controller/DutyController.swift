@@ -10,8 +10,12 @@ import UIKit
 class DutyController: UIViewController {
 
     let mainView = DutyView()
-    let taskArray = ["Купить помидоры", "Убраться", "Купить вино"]
-    let timeArray = ["14:00 - 15:00", "15:00 - 16:00", "16:00 - 17:00"]
+    let detailController = DetailController()
+    var taskArray: [String] = [] {
+            didSet {
+                mainView.taskTable.reloadData() 
+            }
+        }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +29,7 @@ class DutyController: UIViewController {
         if #available(iOS 14.0, *) {
             let pushAddAction = UIAction { [unowned self] _ in
                 let vc = CreateDutyController()
+                vc.delegate = self
                 self.navigationController?.pushViewController(vc, animated: true)
             }
             mainView.plusButton.addAction(pushAddAction, for: .touchUpInside)
@@ -38,17 +43,16 @@ class DutyController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
 
-    private func openDetailVC(for item: String) {
+    private func openDetailVC(for dutyTask: String) {
         let detailVC = DetailController()
-        detailVC.detailView.titleLable.text = item
+        detailVC.modalPresentationStyle = .fullScreen
+        detailVC.detailView.titleLable.text = "Детали события"
+        detailVC.detailView.nameTF.text = dutyTask
+        detailVC.detailView.dutyDescription.text = dutyTask.description
         present(detailVC, animated: true)
     }
 
 }
-
-
-
-
 
 extension DutyController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,12 +62,19 @@ extension DutyController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TaskCell.resuseID) as! TaskCell
         cell.titleLbl.text = taskArray[indexPath.row]
-        cell.timeLbl.text = timeArray[indexPath.row]
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        openDetailVC(for: taskArray[indexPath.row])
+        let task = taskArray[indexPath.row]
+        openDetailVC(for: task)
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+
+extension DutyController: DutyControllerDelegate {
+    func addTask(task: String) {
+        taskArray.append(task)
     }
 }
