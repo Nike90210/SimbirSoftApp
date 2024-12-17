@@ -10,12 +10,19 @@ import UIKit
 class DutyController: UIViewController {
 
     let mainView = DutyView()
+    let detailView = DetailView()
     let detailController = DetailController()
-    var taskArray: [String] = [] {
-            didSet {
-                mainView.taskTable.reloadData() 
-            }
+
+    var taskArayTitles: [String] = [] {
+        didSet {
+            mainView.taskTable.reloadData()
         }
+    }
+    var taskArrayDescriptions: [String] = [] {
+        didSet {
+            detailView.dutyDescription.reloadInputViews()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,12 +50,12 @@ class DutyController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
 
-    private func openDetailVC(for dutyTask: String) {
+    private func openDetailVC(for dutyTaskTitle: String, and dutyTaskDescription: String) {
         let detailVC = DetailController()
         detailVC.modalPresentationStyle = .fullScreen
         detailVC.detailView.titleLable.text = "Детали события"
-        detailVC.detailView.nameTF.text = dutyTask
-        detailVC.detailView.dutyDescription.text = dutyTask.description
+        detailVC.detailView.nameTF.text = dutyTaskTitle
+        detailVC.detailView.dutyDescription.text = dutyTaskDescription
         present(detailVC, animated: true)
     }
 
@@ -56,25 +63,30 @@ class DutyController: UIViewController {
 
 extension DutyController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        taskArray.count
+        taskArayTitles.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TaskCell.resuseID) as! TaskCell
-        cell.titleLbl.text = taskArray[indexPath.row]
+        cell.titleLbl.text = taskArayTitles[indexPath.row]
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let task = taskArray[indexPath.row]
-        openDetailVC(for: task)
+        let task = taskArayTitles[indexPath.row]
+        let description = taskArrayDescriptions[indexPath.row]
+        openDetailVC(for: task, and: description)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
-
 extension DutyController: DutyControllerDelegate {
-    func addTask(task: String) {
-        taskArray.append(task)
+    func addTaskTitle(task: String) {
+        taskArayTitles.append(task)
     }
+
+    func addTaskDescription(task: String) {
+        taskArrayDescriptions.append(task)
+    }
+
 }
