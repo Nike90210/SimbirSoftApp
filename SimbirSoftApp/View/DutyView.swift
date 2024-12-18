@@ -26,7 +26,6 @@ class DutyView: UIView {
         monthLbl.font = .boldSystemFont(ofSize: 24)
         monthLbl.text = "Декабрь"
 
-
         if #available(iOS 13.0, *) {
             plusButton.setImage(UIImage(systemName: "plus"), for: .normal)
         } else {
@@ -37,13 +36,11 @@ class DutyView: UIView {
         plusButton.backgroundColor = .white
         plusButton.tintColor = .red
 
-
         if #available(iOS 14.0, *) {
             dateTaskPicker.preferredDatePickerStyle = .inline
         } else {
             dateTaskPicker.datePickerMode = .dateAndTime
         }
-
 
         taskTable.register(TaskCell.self, forCellReuseIdentifier: TaskCell.resuseID)
     }
@@ -53,7 +50,6 @@ class DutyView: UIView {
         addSubview(plusButton)
         addSubview(dateTaskPicker)
         addSubview(taskTable)
-
 
         monthLbl.translatesAutoresizingMaskIntoConstraints = false
         plusButton.translatesAutoresizingMaskIntoConstraints = false
@@ -65,7 +61,6 @@ class DutyView: UIView {
             monthLbl.topAnchor.constraint(equalTo: topAnchor, constant: 120),
             monthLbl.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 50),
 
-
             plusButton.topAnchor.constraint(equalTo: topAnchor, constant: 110),
             plusButton.leadingAnchor.constraint(equalTo: monthLbl.trailingAnchor, constant: 150),
             plusButton.widthAnchor.constraint(equalToConstant: 50),
@@ -73,7 +68,6 @@ class DutyView: UIView {
 
             dateTaskPicker.topAnchor.constraint(equalTo: plusButton.bottomAnchor, constant: 70),
             dateTaskPicker.centerXAnchor.constraint(equalTo: centerXAnchor),
-
 
             taskTable.topAnchor.constraint(equalTo: dateTaskPicker.bottomAnchor, constant: 20),
             taskTable.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),

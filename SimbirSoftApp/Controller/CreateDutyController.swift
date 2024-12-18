@@ -28,13 +28,17 @@ class CreateDutyController: UIViewController {
     @objc func saveDutyTitle(){
         guard let title = createDutyVC.dutyNameTF.text, !title.isEmpty  else { return }
         guard let description = createDutyVC.dutyDescription.text, !description.isEmpty else { return }
-        delegate?.addTaskTitle(task: title)
-        delegate?.addTaskDescription(task: description)
+
+        let selctedDate = createDutyVC.dataTaskPicker.date
+
+        let task = Tasks(title: title, description: description, date: selctedDate)
+        delegate?.addTasks(task, for: selctedDate)
+
         navigationController?.popViewController(animated: true)
     }
 }
 
 protocol DutyControllerDelegate {
-    func addTaskTitle(task: String)
-    func addTaskDescription(task: String)
+
+    func addTasks(_ task: Tasks, for date: Date)
 }

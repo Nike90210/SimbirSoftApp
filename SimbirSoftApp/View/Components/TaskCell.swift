@@ -24,7 +24,7 @@ class TaskCell: UITableViewCell {
 
     func setViews() {
         titleLbl.text = ""
-        timeLbl.font = .boldSystemFont(ofSize: 10)
+        titleLbl.font = .boldSystemFont(ofSize: 10)
         timeLbl.text = ""
         timeLbl.font = .boldSystemFont(ofSize: 10)
     }

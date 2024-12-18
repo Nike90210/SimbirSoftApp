@@ -12,8 +12,8 @@ class CreateDutyView: UIView {
 
     var addButton = UIButton(type: .system)
     var dutyNameTF = UITextField()
+    var dutyTimelbl = UILabel()
     var dutyDescription = UITextField()
-    var dutyStartLbl = UILabel()
     var dataTaskPicker = UIDatePicker()
 
     init() {
@@ -37,9 +37,9 @@ class CreateDutyView: UIView {
         dutyDescription.borderStyle = .roundedRect
         dutyDescription.textColor = .black
 
-        dutyStartLbl.text = "Начало:"
-        dutyStartLbl.font = UIFont(name: "Helvetica", size: 18)
-        dutyStartLbl.textColor = .black
+        dutyTimelbl.text = "Начало:"
+        dutyTimelbl.font = UIFont(name: "Helvetica", size: 18)
+        dutyTimelbl.textColor = .black
 
 
         if #available(iOS 13.4, *) {
@@ -65,7 +65,7 @@ class CreateDutyView: UIView {
         addSubview(dutyDescription)
         addSubview(stackView)
 
-        stackView.addArrangedSubview(dutyStartLbl)
+        stackView.addArrangedSubview(dutyTimelbl)
         stackView.addArrangedSubview(dataTaskPicker)
 
 
