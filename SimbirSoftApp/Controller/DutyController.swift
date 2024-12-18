@@ -64,6 +64,7 @@ class DutyController: UIViewController {
         if #available(iOS 14.0, *) {
             let pushAddAction = UIAction { [unowned self] _ in
                 let vc = CreateDutyController()
+                vc.selectedDate = mainView.dateTaskPicker.date
                 vc.delegate = self
                 self.navigationController?.pushViewController(vc, animated: true)
             }
@@ -81,6 +82,7 @@ class DutyController: UIViewController {
     private func openDetailVC(for task: Tasks) {
         let detailVC = DetailController()
         detailVC.modalPresentationStyle = .fullScreen
+        detailVC.selectedDate = task.date
         detailVC.detailView.titleLable.text = "Детали события"
         detailVC.detailView.nameTF.text = task.title
         detailVC.detailView.dutyDescription.text = task.description
