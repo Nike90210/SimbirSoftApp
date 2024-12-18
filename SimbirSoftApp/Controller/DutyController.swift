@@ -48,17 +48,17 @@ class DutyController: UIViewController {
 
     func setupDatePicker() {
         mainView.dateTaskPicker.addTarget(self, action: #selector(dateChanged), for: .valueChanged)
-        }
+    }
 
     @objc func dateChanged() {
-            selectedDate = formattedDate(mainView.dateTaskPicker.date)
-        }
+        selectedDate = formattedDate(mainView.dateTaskPicker.date)
+    }
 
     func setupTable() {
-            mainView.taskTable.dataSource = self
-            mainView.taskTable.delegate = self
-            mainView.taskTable.register(TaskCell.self, forCellReuseIdentifier: TaskCell.resuseID)
-        }
+        mainView.taskTable.dataSource = self
+        mainView.taskTable.delegate = self
+        mainView.taskTable.register(TaskCell.self, forCellReuseIdentifier: TaskCell.resuseID)
+    }
 
     func addAction() {
         if #available(iOS 14.0, *) {
@@ -91,20 +91,25 @@ class DutyController: UIViewController {
 
 extension DutyController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tasksByDate[selectedDate]?.count ?? 0
+        return tasksByDate[selectedDate]?.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TaskCell.resuseID) as! TaskCell
-            if let task = tasksByDate[selectedDate]?[indexPath.row] {
-                cell.titleLbl.text = task.title
-                cell.timeLbl.text = formattedDate(task.date, format: "HH:mm")
-            }
-            return cell
+
+        if let task = tasksByDate[selectedDate]?[indexPath.row] {
+            let hour = Calendar.current.component(.hour, from: task.date)
+            let startTime = String(format: "%2d:00", hour)
+            let endTime = String(format: "%2d:00", hour + 1)
+
+            cell.titleLbl.text = task.title
+            cell.timeLbl.text = "\(startTime) - \(endTime)"
+        }
+        return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let task = tasksByDate[selectedDate]?[indexPath.row] else { return }
+        guard let task = tasksByDate[selectedDate]?[indexPath.row] else {return}
         openDetailVC(for: task)
         tableView.deselectRow(at: indexPath, animated: true)
     }
