@@ -29,11 +29,12 @@ class DetailView: UIView {
         readyButton.backgroundColor = .clear
 
         titleLable.text = "Детали события"
-        titleLable.textColor = .systemRed
+        titleLable.textColor = .black
         titleLable.font = UIFont(name: "Helvetica", size: 18)
 
         nameTF.placeholder = "Название события"
         nameTF.font = UIFont(name: "Helvetica", size: 14)
+        nameTF.borderStyle = .roundedRect
         nameTF.textColor = .black
 
         if #available(iOS 14.0, *) {
@@ -66,7 +67,8 @@ class DetailView: UIView {
 
             nameTF.topAnchor.constraint(equalTo: titleLable.bottomAnchor, constant: 40),
             nameTF.leadingAnchor.constraint(equalTo: leadingAnchor , constant: 25),
-            nameTF.heightAnchor.constraint(equalToConstant: 60),
+            nameTF.heightAnchor.constraint(equalToConstant: 40),
+            nameTF.widthAnchor.constraint(equalToConstant: 350),
 
             datePicker.topAnchor.constraint(equalTo: nameTF.bottomAnchor, constant: 20),
             datePicker.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),

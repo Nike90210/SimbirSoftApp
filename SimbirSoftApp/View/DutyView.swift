@@ -59,15 +59,16 @@ class DutyView: UIView {
         NSLayoutConstraint.activate([
 
             monthLbl.topAnchor.constraint(equalTo: topAnchor, constant: 120),
-            monthLbl.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 50),
+            monthLbl.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
 
             plusButton.topAnchor.constraint(equalTo: topAnchor, constant: 110),
-            plusButton.leadingAnchor.constraint(equalTo: monthLbl.trailingAnchor, constant: 150),
+            plusButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -50),
             plusButton.widthAnchor.constraint(equalToConstant: 50),
             plusButton.heightAnchor.constraint(equalToConstant: 50),
 
             dateTaskPicker.topAnchor.constraint(equalTo: plusButton.bottomAnchor, constant: 70),
             dateTaskPicker.centerXAnchor.constraint(equalTo: centerXAnchor),
+            dateTaskPicker.widthAnchor.constraint(equalToConstant: 400),
 
             taskTable.topAnchor.constraint(equalTo: dateTaskPicker.bottomAnchor, constant: 20),
             taskTable.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
