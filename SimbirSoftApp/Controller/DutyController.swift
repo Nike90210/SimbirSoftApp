@@ -44,14 +44,32 @@ class DutyController: UIViewController {
         setupTable()
         setupDatePicker()
         selectedDate = formattedDate(Date())
+        currentMonth()
     }
 
     func setupDatePicker() {
         mainView.dateTaskPicker.addTarget(self, action: #selector(dateChanged), for: .valueChanged)
     }
 
+    func currentMonth() {
+        let currentDate = Date()
+        selectedDate = formattedDate(currentDate)
+        updateMonthLabel(for: currentDate)
+    }
+
+    func updateMonthLabel (for date: Date) {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ru_RU")
+        formatter.dateFormat = "LLLL"
+        mainView.monthLbl.text = formatter.string(from: date).capitalized
+    }
+
     @objc func dateChanged() {
-        selectedDate = formattedDate(mainView.dateTaskPicker.date)
+//        selectedDate = formattedDate(mainView.dateTaskPicker.date)
+        let newDate = mainView.dateTaskPicker.date
+        selectedDate = formattedDate(newDate)
+        updateMonthLabel(for: newDate)
+
     }
 
     func setupTable() {

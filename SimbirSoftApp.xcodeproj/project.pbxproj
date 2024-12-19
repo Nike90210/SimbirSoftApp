@@ -65,6 +65,11 @@
 			path = SimbirSoftAppTests;
 			sourceTree = "<group>";
 		};
+		AA7DA8332D144C6A00777F77 /* Extensions */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +185,7 @@
 				AAA21B702D0DE2A9004BA8B0 /* Model */,
 				AAA21B772D0DE2A9004BA8B0 /* View */,
 				AAA21B6D2D0DE2A9004BA8B0 /* Controller */,
+				AA7DA8332D144C6A00777F77 /* Extensions */,
 				AAA21B732D0DE2A9004BA8B0 /* Resourses */,
 				AAA21B782D0DE2A9004BA8B0 /* AppDelegate.swift */,
 				AAA21B7A2D0DE2A9004BA8B0 /* SceneDelegate.swift */,
@@ -204,6 +210,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				AA7DA8332D144C6A00777F77 /* Extensions */,
 			);
 			name = SimbirSoftApp;
 			productName = SimbirSoftApp;

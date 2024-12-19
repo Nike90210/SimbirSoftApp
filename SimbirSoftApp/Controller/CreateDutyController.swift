@@ -22,6 +22,7 @@ class CreateDutyController: UIViewController {
             createDutyVC.dataTaskPicker.date = date
         }
         setupButton()
+        self.dismissKeyboardTap()
     }
 
 

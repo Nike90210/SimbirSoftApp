@@ -21,6 +21,7 @@ class DetailController: UIViewController {
             detailView.datePicker.date = date
         }
         setupButton()
+        self.dismissKeyboardTap()
     }
         func setupButton() {
             detailView.readyButton.addTarget(self, action: #selector(closeModalVC), for: .touchUpInside)
