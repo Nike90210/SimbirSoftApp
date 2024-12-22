@@ -24,7 +24,6 @@ class CreateDutyView: UIView {
     }
 
     func setView() {
-
         addButton.setTitle("Добавить", for: .normal)
         addButton.setTitleColor(.systemRed, for: .normal)
         addButton.backgroundColor = .clear
@@ -41,14 +40,12 @@ class CreateDutyView: UIView {
         dutyTimelbl.font = UIFont(name: "Helvetica", size: 18)
         dutyTimelbl.textColor = .black
 
-
         if #available(iOS 13.4, *) {
             dataTaskPicker.preferredDatePickerStyle = .automatic
         } else {
             dataTaskPicker.datePickerMode = .dateAndTime
         }
     }
-
 
     let stackView: UIStackView = {
         let stackView = UIStackView()
@@ -58,7 +55,6 @@ class CreateDutyView: UIView {
         return stackView
     }()
 
-
     func setConstraints() {
         addSubview(addButton)
         addSubview(dutyNameTF)
@@ -67,7 +63,6 @@ class CreateDutyView: UIView {
 
         stackView.addArrangedSubview(dutyTimelbl)
         stackView.addArrangedSubview(dataTaskPicker)
-
 
         [stackView, addButton, dutyNameTF, dutyDescription].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
@@ -89,13 +84,11 @@ class CreateDutyView: UIView {
             dutyDescription.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             dutyDescription.heightAnchor.constraint(equalToConstant: 100),
 
-
             stackView.topAnchor.constraint(equalTo: dutyDescription.bottomAnchor, constant: 100),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
         ])
     }
-
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

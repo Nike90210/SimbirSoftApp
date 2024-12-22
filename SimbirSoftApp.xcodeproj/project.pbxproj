@@ -14,12 +14,13 @@
 		AAA21B7C2D0DE2A9004BA8B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAA21B712D0DE2A9004BA8B0 /* Assets.xcassets */; };
 		AAA21B7F2D0DE2A9004BA8B0 /* DutyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA21B6C2D0DE2A9004BA8B0 /* DutyController.swift */; };
 		AAA21B802D0DE2A9004BA8B0 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA21B6E2D0DE2A9004BA8B0 /* Task.swift */; };
-		AAA21B812D0DE2A9004BA8B0 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA21B6F2D0DE2A9004BA8B0 /* TaskManager.swift */; };
 		AAA21B822D0DE2A9004BA8B0 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA21B742D0DE2A9004BA8B0 /* TaskCell.swift */; };
 		AAA21B832D0DE2A9004BA8B0 /* DutyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA21B762D0DE2A9004BA8B0 /* DutyView.swift */; };
 		AAA21B842D0DE2A9004BA8B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA21B782D0DE2A9004BA8B0 /* AppDelegate.swift */; };
 		AAA21B852D0DE2A9004BA8B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA21B7A2D0DE2A9004BA8B0 /* SceneDelegate.swift */; };
 		AAA21B862D0DE2A9004BA8B0 /* tasks.json in Sources */ = {isa = PBXBuildFile; fileRef = AAA21B722D0DE2A9004BA8B0 /* tasks.json */; };
+		AAF0CD172D16D8AA001D3D40 /* TaskRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF0CD162D16D8AA001D3D40 /* TaskRealm.swift */; };
+		AAF712832D1844AB00D789DE /* TasksManager .swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF712822D1844AB00D789DE /* TasksManager .swift */; };
 		CF1CED5FA54C0D78707E49C3 /* Pods_SimbirSoftApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97A1C8053D769CFAC9B0A50 /* Pods_SimbirSoftApp.framework */; };
 		E0C415CF00AA11647694F36F /* Pods_SimbirSoftAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C40C2A46E7FA84A8F8C7BA /* Pods_SimbirSoftAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -47,7 +48,6 @@
 		AA6F9D292D0EF49600F3B4AD /* CreateDutyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDutyView.swift; sourceTree = "<group>"; };
 		AAA21B6C2D0DE2A9004BA8B0 /* DutyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DutyController.swift; sourceTree = "<group>"; };
 		AAA21B6E2D0DE2A9004BA8B0 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		AAA21B6F2D0DE2A9004BA8B0 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		AAA21B712D0DE2A9004BA8B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAA21B722D0DE2A9004BA8B0 /* tasks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tasks.json; sourceTree = "<group>"; };
 		AAA21B742D0DE2A9004BA8B0 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
@@ -55,6 +55,8 @@
 		AAA21B782D0DE2A9004BA8B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAA21B792D0DE2A9004BA8B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAA21B7A2D0DE2A9004BA8B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AAF0CD162D16D8AA001D3D40 /* TaskRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRealm.swift; sourceTree = "<group>"; };
+		AAF712822D1844AB00D789DE /* TasksManager .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TasksManager .swift"; sourceTree = "<group>"; };
 		D97A1C8053D769CFAC9B0A50 /* Pods_SimbirSoftApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimbirSoftApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E63570DAB4C35CDE0376C283 /* Pods-SimbirSoftApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimbirSoftApp.debug.xcconfig"; path = "Target Support Files/Pods-SimbirSoftApp/Pods-SimbirSoftApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,7 +148,9 @@
 			isa = PBXGroup;
 			children = (
 				AAA21B6E2D0DE2A9004BA8B0 /* Task.swift */,
-				AAA21B6F2D0DE2A9004BA8B0 /* TaskManager.swift */,
+				AAF0CD162D16D8AA001D3D40 /* TaskRealm.swift */,
+				AAF712822D1844AB00D789DE /* TasksManager .swift */,
+				AAA21B722D0DE2A9004BA8B0 /* tasks.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				AAA21B712D0DE2A9004BA8B0 /* Assets.xcassets */,
-				AAA21B722D0DE2A9004BA8B0 /* tasks.json */,
 			);
 			path = Resourses;
 			sourceTree = "<group>";
@@ -370,12 +373,13 @@
 				AAA21B862D0DE2A9004BA8B0 /* tasks.json in Sources */,
 				AA6797CD2D10388200ADCA03 /* DetailView.swift in Sources */,
 				AA6F9D282D0EF45700F3B4AD /* CreateDutyController.swift in Sources */,
+				AAF712832D1844AB00D789DE /* TasksManager .swift in Sources */,
 				AA6797CB2D10385A00ADCA03 /* DetailController.swift in Sources */,
 				AAA21B7F2D0DE2A9004BA8B0 /* DutyController.swift in Sources */,
 				AAA21B802D0DE2A9004BA8B0 /* Task.swift in Sources */,
-				AAA21B812D0DE2A9004BA8B0 /* TaskManager.swift in Sources */,
 				AAA21B822D0DE2A9004BA8B0 /* TaskCell.swift in Sources */,
 				AA6F9D2A2D0EF49600F3B4AD /* CreateDutyView.swift in Sources */,
+				AAF0CD172D16D8AA001D3D40 /* TaskRealm.swift in Sources */,
 				AAA21B832D0DE2A9004BA8B0 /* DutyView.swift in Sources */,
 				AAA21B842D0DE2A9004BA8B0 /* AppDelegate.swift in Sources */,
 				AAA21B852D0DE2A9004BA8B0 /* SceneDelegate.swift in Sources */,

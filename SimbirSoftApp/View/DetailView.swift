@@ -22,7 +22,6 @@ class DetailView: UIView {
         setConstraints()
     }
 
-
     func setView(){
         readyButton.setTitle("Готово", for: .normal)
         readyButton.setTitleColor(.systemRed, for: .normal)
@@ -80,14 +79,6 @@ class DetailView: UIView {
             dutyDescription.heightAnchor.constraint(equalToConstant: 120)
         ])
     }
-
-
-
-
-
-
-
-
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

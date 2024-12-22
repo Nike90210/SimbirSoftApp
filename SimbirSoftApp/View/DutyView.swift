@@ -22,7 +22,6 @@ class DutyView: UIView {
     }
 
     func setView() {
-
         monthLbl.font = .boldSystemFont(ofSize: 24)
         monthLbl.text = "Декабрь"
 
@@ -41,7 +40,6 @@ class DutyView: UIView {
         } else {
             dateTaskPicker.datePickerMode = .dateAndTime
         }
-
         taskTable.register(TaskCell.self, forCellReuseIdentifier: TaskCell.resuseID)
     }
 
@@ -76,7 +74,6 @@ class DutyView: UIView {
             taskTable.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
         ])
     }
-
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
