@@ -14,7 +14,7 @@ class DutyView: UIView {
     let dateTaskPicker = UIDatePicker()
     let taskTable = UITableView()
 
-    init(){
+    init() {
         super.init(frame: CGRect())
         backgroundColor = .white
         setView()
@@ -24,19 +24,31 @@ class DutyView: UIView {
     func setView() {
         monthLbl.font = .boldSystemFont(ofSize: 24)
         monthLbl.text = "Декабрь"
-        plusButton.setImage(UIImage(systemName: "plus"), for: .normal)
+
+        if #available(iOS 13.0, *) {
+            plusButton.setImage(UIImage(systemName: "plus"), for: .normal)
+        } else {
+
+            plusButton.setTitle("+", for: .normal)
+        }
+
         plusButton.backgroundColor = .white
         plusButton.tintColor = .red
-        dateTaskPicker.preferredDatePickerStyle = .inline
-        taskTable.register(TaskCell.self, forCellReuseIdentifier: TaskCell.resuseID)
 
+        if #available(iOS 14.0, *) {
+            dateTaskPicker.preferredDatePickerStyle = .inline
+        } else {
+            dateTaskPicker.datePickerMode = .dateAndTime
+        }
+        taskTable.register(TaskCell.self, forCellReuseIdentifier: TaskCell.resuseID)
     }
 
-    func setConstraints(){
+    func setConstraints() {
         addSubview(monthLbl)
         addSubview(plusButton)
         addSubview(dateTaskPicker)
         addSubview(taskTable)
+
         monthLbl.translatesAutoresizingMaskIntoConstraints = false
         plusButton.translatesAutoresizingMaskIntoConstraints = false
         dateTaskPicker.translatesAutoresizingMaskIntoConstraints = false
@@ -44,16 +56,17 @@ class DutyView: UIView {
 
         NSLayoutConstraint.activate([
 
-            monthLbl.topAnchor.constraint(equalTo: topAnchor, constant: 150),
-            monthLbl.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 50),
+            monthLbl.topAnchor.constraint(equalTo: topAnchor, constant: 120),
+            monthLbl.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
 
-            plusButton.topAnchor.constraint(equalTo: topAnchor, constant: 137),
-            plusButton.leadingAnchor.constraint(equalTo: monthLbl.trailingAnchor, constant: 150),
+            plusButton.topAnchor.constraint(equalTo: topAnchor, constant: 110),
+            plusButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -50),
             plusButton.widthAnchor.constraint(equalToConstant: 50),
             plusButton.heightAnchor.constraint(equalToConstant: 50),
 
-            dateTaskPicker.topAnchor.constraint(equalTo: plusButton.bottomAnchor, constant: 20),
+            dateTaskPicker.topAnchor.constraint(equalTo: plusButton.bottomAnchor, constant: 70),
             dateTaskPicker.centerXAnchor.constraint(equalTo: centerXAnchor),
+            dateTaskPicker.widthAnchor.constraint(equalToConstant: 400),
 
             taskTable.topAnchor.constraint(equalTo: dateTaskPicker.bottomAnchor, constant: 20),
             taskTable.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
@@ -61,7 +74,6 @@ class DutyView: UIView {
             taskTable.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
         ])
     }
-
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

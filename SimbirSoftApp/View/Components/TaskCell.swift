@@ -13,19 +13,15 @@ class TaskCell: UITableViewCell {
     let titleLbl = UILabel(frame: CGRect())
     let timeLbl = UILabel(frame: CGRect())
 
-
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super .init(style: style, reuseIdentifier: reuseIdentifier)
         setViews()
         setConstraints()
     }
-
-
-
     func setViews() {
-        titleLbl.text = "Предстоящее дело"
-        timeLbl.font = .boldSystemFont(ofSize: 10)
-        timeLbl.text = "10:00 - 11:00"
+        titleLbl.text = ""
+        titleLbl.font = .boldSystemFont(ofSize: 10)
+        timeLbl.text = ""
         timeLbl.font = .boldSystemFont(ofSize: 10)
     }
 
@@ -50,8 +46,6 @@ class TaskCell: UITableViewCell {
             stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16)
         ])
     }
-
-
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
